@@ -1,0 +1,17 @@
+take the first element of the array
+
+look through the rest of the array to find the
+lowest value in it, and then swap the
+first element with it
+
+
+can easily iterate using for
+or a recursive function
+
+should I use the sort function, or find
+some other way?  the sort would be the easiest
+
+but I really only need the smallest element
+
+never mind, can use use (apply min list)
+
