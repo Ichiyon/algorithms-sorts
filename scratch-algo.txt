@@ -4,6 +4,13 @@ look through the rest of the array to find the
 lowest value in it, and then swap the
 first element with it
 
+move to the next element
+
+repeat
+
+
+
+
 
 can easily iterate using for
 or a recursive function
@@ -14,4 +21,24 @@ some other way?  the sort would be the easiest
 but I really only need the smallest element
 
 never mind, can use use (apply min list)
+
+
+
+
+MERGE SORT
+
+divide the list in half 
+repeat until it is as small as possible (single element)
+
+
+
+each piece can be sorted against an empty piece, then sort against each other all the way up
+because if they are sorted below, then when compared they will also be sorted
+
+
+car cdr the pieces
+
+how to get the pieces?
+
+
 
