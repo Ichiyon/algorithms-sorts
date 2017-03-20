@@ -10,9 +10,11 @@
 ;;
 (define (max-heapify list1 index)
   (cond
-    ((and (< parent left-child) (< parent right-child)) (swap parent (max left-child right-child)))
-    ((< parent left-child) (swap parent left-child))
-    ((> parent right-child) (swap parent right-child))))
+    ((and (< index (find-left-child list1 index))
+          (< index (find-right-child list1 index))))
+     (swap index (max (find-left-child list1 index) (find-right-child list1 index)))
+    ((< index (find-left-child list1 index) (swap index (find-left-child list1 index))))
+    ((> index (find-right-child list1 index) (swap index (find-right-child list1 index))))))
 
 
 ;; parent = i/2
@@ -32,3 +34,21 @@
 ;;
 (define (find-right-child list1 index)
   (vector-ref (+ 1 (* 2 index))))
+
+;;  find-parent: list number -> value
+;;
+;;  find the parent of the current index
+;;
+(define (find-parent list1 index)
+  (vector-ref (floor (/ i 2))))
+
+
+;;  switch-zero (node switch-index zero-index) -> node
+;;
+;;  takes in a node and an index and switches the 0 with the
+;;  number at the index (also updates the depth)
+;;  switches any numbers actually, will update it later
+;;
+(define (switch-num-vec vector1 switch1 switch2)
+  (let ((tmp (vector-ref vector1 switch2)))
+    (vector-set! (vector-set! vector1 switch2 (vector-ref vector1 switch1)) switch1 tmp)))
