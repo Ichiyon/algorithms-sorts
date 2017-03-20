@@ -1,0 +1,9 @@
+#lang racket
+
+
+;;  a node is a structure
+ ;;  (node state depth heuristic)
+ ;;  where state is a list, depth is a number
+ ;;  and heuristic is a number
+ ;;
+ (struct node (parent state depth heuristic) #:transparent #:mutable)
